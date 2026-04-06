@@ -78,6 +78,6 @@ def test_admin_dashboard_authenticated(client, app):
         admin.set_password("password")
         db.session.commit()
 
-    login_admin(client)
+    login_admin(client) 
     res = client.get("/admin/")
     assert res.status_code == 200
